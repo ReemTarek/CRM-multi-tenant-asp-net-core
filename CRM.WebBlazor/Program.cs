@@ -4,7 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents();
-
+//configure api project address
+var apiAddress = builder.Configuration["ApiAddress"];
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiAddress) });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

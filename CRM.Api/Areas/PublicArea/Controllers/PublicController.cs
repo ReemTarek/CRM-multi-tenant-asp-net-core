@@ -13,7 +13,7 @@ namespace CRM.Api.Areas.PublicArea.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok("Hello World");
+            return Ok("Hello from public area");
         }
     }
 }
