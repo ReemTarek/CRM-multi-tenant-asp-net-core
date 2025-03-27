@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Api", "CRM.Api\CRM.Api.csproj", "{D6588ACC-9198-4BF0-A570-B6998916E9DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.WebBlazor", "CRM.WebBlazor\CRM.WebBlazor.csproj", "{56AD6351-28DA-4D4F-AF01-E9AB6CF5FF27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D6588ACC-9198-4BF0-A570-B6998916E9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6588ACC-9198-4BF0-A570-B6998916E9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6588ACC-9198-4BF0-A570-B6998916E9DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56AD6351-28DA-4D4F-AF01-E9AB6CF5FF27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AD6351-28DA-4D4F-AF01-E9AB6CF5FF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56AD6351-28DA-4D4F-AF01-E9AB6CF5FF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56AD6351-28DA-4D4F-AF01-E9AB6CF5FF27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
