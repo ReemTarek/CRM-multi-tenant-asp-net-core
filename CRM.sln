@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Model", "CRM.Model\CRM.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.DataAccess", "CRM.DataAccess\CRM.DataAccess.csproj", "{0C858951-AEA8-44CA-A803-377742A69814}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Service", "CRM.Service\CRM.Service.csproj", "{6527623B-35D8-4FFC-97DC-BF2EBE073716}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0C858951-AEA8-44CA-A803-377742A69814}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C858951-AEA8-44CA-A803-377742A69814}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C858951-AEA8-44CA-A803-377742A69814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6527623B-35D8-4FFC-97DC-BF2EBE073716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6527623B-35D8-4FFC-97DC-BF2EBE073716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6527623B-35D8-4FFC-97DC-BF2EBE073716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6527623B-35D8-4FFC-97DC-BF2EBE073716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
