@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CRM.Model.InputModels
 {
-    public class ApplicationUserInputModel
+    public class ApplicationUserRegisterInputModel
     {
         [Required]
         public required string FirstName { get; set; }
@@ -22,5 +22,6 @@ namespace CRM.Model.InputModels
         [Required]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public required string ConfirmPassword { get; set; }
-    }
+    } 
+  
 }
