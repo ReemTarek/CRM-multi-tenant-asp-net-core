@@ -1,6 +1,7 @@
 ﻿@inherits LayoutComponentBase
+@inject IJSRuntime JsRuntime
 @* Required *@
-<MudThemeProvider />
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode"/>
 <MudPopoverProvider />
 @* Needed for dialogs *@
 <MudDialogProvider />
@@ -10,6 +11,9 @@
     <MudAppBar>
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         My CRM Application
+        <MudSpacer/>
+        <MudIconButton Icon="@_currentIcon" Color="Color.Inherit" Edge="Edge.End" OnClick="ToggleDarkMode" />
+
     </MudAppBar>
     <MudDrawer @bind-Open="@_drawerOpen">
         <NavMenu/>
@@ -21,9 +25,30 @@
 
 @code {
     bool _drawerOpen = true;
-
+    bool _isDarkMode = true;
+    string _currentIcon = Icons.Material.Filled.Brightness4;
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var darkMode = await JsRuntime.InvokeAsync<string>("localStorageHelper.getItem", "darkMode");
+            if (!string.IsNullOrEmpty(darkMode))
+            {
+                _isDarkMode = bool.Parse(darkMode);
+                _currentIcon = _isDarkMode ? Icons.Material.Filled.Brightness4 : Icons.Material.Filled.Brightness7;
+                StateHasChanged();
+            }
+        }
+
+    }
+    private async Task ToggleDarkMode()
+    {
+        _isDarkMode = !_isDarkMode;
+        _currentIcon = _isDarkMode ? Icons.Material.Filled.Brightness4 : Icons.Material.Filled.Brightness7;
+        await JsRuntime.InvokeVoidAsync("localStorageHelper.setItem", "darkMode", _isDarkMode.ToString());
     }
 }
