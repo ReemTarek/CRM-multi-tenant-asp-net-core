@@ -1,6 +1,8 @@
 using CRM.DataAccess;
-using CRM.Model.Identity;
+using CRM.Service;
+using CRM.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found."); ;
 
@@ -17,6 +19,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new() { Title = "CRM Api", Version = "v1" });
 });
+
+//DI
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,6 +29,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CRM Api v1"));
+    //open swagger
+    var url = "https://localhost:7080/swagger";
+    Process.Start(new ProcessStartInfo { FileName = url, UseShellExecute = true });
+
 }
 
 app.UseHttpsRedirection();

@@ -5,9 +5,9 @@ namespace CRM.Model.Enums
 {
     public enum Gender
     {
-        [EnumMember(Value ="Male")] 
+        [EnumMember(Value = "Male")]
         Male,
-        [EnumMember(Value ="Female")]
+        [EnumMember(Value = "Female")]
         Female
 
     }
