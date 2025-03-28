@@ -1,12 +1,15 @@
 using CRM.WebBlazor.Components;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 //configure api project address
 var apiAddress = builder.Configuration["ApiAddress"];
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(apiAddress) });
+//mudblazor
+builder.Services.AddMudServices();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,6 +26,6 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
-app.MapRazorComponents<App>();
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 
 app.Run();
