@@ -32,7 +32,8 @@ namespace CRM.Service
                 LastName = model.LastName,
                 DateOfBirth = model.DateOfBirth,
                 Gender = model.Gender,
-                RegistrationDate = DateTime.UtcNow
+                RegistrationDate = DateTime.UtcNow,
+                UserName=model.Email
             };
             var result = await _userManager.CreateAsync(user, model.Password);
             return result.Succeeded ? true : throw new Exception("Unable to create user, Errors: " + result.Errors);
