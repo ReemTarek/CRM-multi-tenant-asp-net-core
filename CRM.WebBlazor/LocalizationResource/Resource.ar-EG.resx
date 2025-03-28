@@ -117,7 +117,100 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="button-login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="button-register" xml:space="preserve">
+    <value>عمل حساب جديد</value>
+  </data>
+  <data name="button-reset" xml:space="preserve">
+    <value>استرجاع</value>
+  </data>
+  <data name="gender-female" xml:space="preserve">
+    <value>انثي</value>
+  </data>
+  <data name="gender-male" xml:space="preserve">
+    <value>ذكر</value>
+  </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>مرحبا للبرنامج</value>
+  </data>
+  <data name="input-email" xml:space="preserve">
+    <value>الايميل</value>
+  </data>
+  <data name="input-password" xml:space="preserve">
+    <value>الباسوورد</value>
+  </data>
+  <data name="label-errors" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="message-email-format" xml:space="preserve">
+    <value>الايميل غير صحيح</value>
+  </data>
+  <data name="message-email-required" xml:space="preserve">
+    <value>الايميل اساسي</value>
+  </data>
+  <data name="message-invalid-login" xml:space="preserve">
+    <value>محاولة تسجيل دخول غير صحيحة</value>
+  </data>
+  <data name="message-login-not-allowed" xml:space="preserve">
+    <value>غير مسموح تسجيل الدخول</value>
+  </data>
+  <data name="message-password-validation" xml:space="preserve">
+    <value>كلمة المرور يجب ان تكون 8 احرف علي الاقل و تحتوي علي ارقام و رموز</value>
+  </data>
+  <data name="message-password-required" xml:space="preserve">
+    <value>كلمة المرور اساسي</value>
+  </data>
+  <data name="message-two-factor-required" xml:space="preserve">
+    <value>عامل الثنائي اساسي</value>
+  </data>
+  <data name="message-unknown-error" xml:space="preserve">
+    <value>حدث خطأ غير معروف</value>
+  </data>
+  <data name="message-user-locked-out" xml:space="preserve">
+    <value>المستخدم تم منعه</value>
+  </data>
+  <data name="title-login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="title-register" xml:space="preserve">
+    <value>انشاء حساب</value>
+  </data>
+  <data name="input-firstname" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="message-firstname-required" xml:space="preserve">
+    <value>الاسم الاول اساسي</value>
+  </data>
+  <data name="input-lastname" xml:space="preserve">
+    <value>الاسم الاخير</value>
+  </data>
+  <data name="message-lastname-required" xml:space="preserve">
+    <value>الاسم الاخير اساسي</value>
+  </data>
+  <data name="input-dateofbirth" xml:space="preserve">
+    <value>تاريخ الميلاد</value>
+  </data>
+  <data name="input-confirm-password" xml:space="preserve">
+    <value>تأكيد الباسوورد</value>
+  </data>
+  <data name="message-confirm-password-required" xml:space="preserve">
+    <value>تأكيد كلمة  المرور</value>
+  </data>
+  <data name="message-confirm-password-match" xml:space="preserve">
+    <value>كلمات المرور غير متطابقة</value>
+  </data>
+  <data name="message-email-exists" xml:space="preserve">
+    <value>الايميل مسجل من قبل</value>
+  </data>
+  <data name="message-password-weak" xml:space="preserve">
+    <value>كلمة المرور ضعيفة</value>
+  </data>
+  <data name="message-invalid-user-data" xml:space="preserve">
+    <value>بيانات المستخدم غير صحيحة</value>
+  </data>
+  <data name="input-gender" xml:space="preserve">
+    <value>النوع</value>
   </data>
 </root>
